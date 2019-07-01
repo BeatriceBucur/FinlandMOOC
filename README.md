@@ -1,2 +1,2 @@
 # FinlandMOOC
-sandbox for learning
+My Sandbox for learning programming
