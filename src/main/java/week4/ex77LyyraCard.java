@@ -34,7 +34,7 @@ public class ex77LyyraCard {
     public void payEconomical() {
         // write code here
         //balance = balance - 2.50;
-        if(balance>1){
+        if(balance>=2.50){
             balance = balance -2.50;
         }
     }
@@ -42,7 +42,7 @@ public class ex77LyyraCard {
     public void payGourmet() {
         // write code here
         //balance = balance - 4.00;
-        if(balance>1){
+        if(balance>=4.00){
             balance = balance -4.00;
         }else{
             //System.out.println("if there is not enough money the balance should stay the same");
@@ -50,7 +50,7 @@ public class ex77LyyraCard {
         }
     }
     public static void main(String[] args) {
-        ex77LyyraCard card = new ex77LyyraCard(5);
+        ex77LyyraCard card = new ex77LyyraCard(6);
         System.out.println(card);
 
         card.payGourmet();
