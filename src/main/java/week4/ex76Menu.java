@@ -37,7 +37,9 @@ public class ex76Menu {
     }
 
     public void addMeal(String meal) {
-        this.meals.add(meal);
+        if (!meals.contains(meal)){
+            this.meals.add(meal);
+        }
     }
 
     public void printMeals(){
@@ -47,23 +49,33 @@ public class ex76Menu {
     }
 
     public void clearMenu(){
-        meals.removeAll(this.meals);
+        System.out.println("printez din interiorul lui clearMenu");
+        meals.clear();
+    }
+
+    public void removeSingleMenu(String meal){
+        System.out.println("printez din interiorul lui removeSingleMenu");
+        meals.remove(meal);
+    }
+
+    @Override
+    public String toString() {
+        return "ex76Menu{" +
+                "meals=" + meals +
+                '}';
     }
 
     public static void main(String[] args) {
         ex76Menu meniulMeu  = new ex76Menu();
+
         meniulMeu.addMeal("papa bun");
         meniulMeu.addMeal("yummie food");
-       //System.out.println(meniulMeu);
-        //de mentionat aici ca inainte de a face metoda Print meals - mie nu imi printa nimic aici
-        // de fapt printa un container gol.
-        meniulMeu.printMeals();
-        //in schimb metoda clearMenu nu functioneaza
-        System.out.println("acum apelam metoda clearMenu");
-        meniulMeu.clearMenu();
-        meniulMeu.printMeals();
-        //cum verifica ca metoda mea clearMenu chiar functioneaza?
+        meniulMeu.addMeal("papa bun");
 
+        meniulMeu.printMeals();
+
+        meniulMeu.removeSingleMenu("papa bun");
+        meniulMeu.printMeals();
     }
 }
 
