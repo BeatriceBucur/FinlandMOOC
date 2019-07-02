@@ -23,7 +23,22 @@ public class Person {
         System.out.println(this.name + " , age "+ this.age + " years");
     }
 
+    public boolean isAdult(){
+        if(this.age>=18){
+            return true;
+        }
+        return false;
+    }
 
+    public String getName(){
+        return this.name;
+    }
 
-
+    @Override
+    public String toString() {
+        return "Person{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
