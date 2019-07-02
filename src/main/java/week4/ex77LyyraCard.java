@@ -32,23 +32,32 @@ public class ex77LyyraCard {
     }
     //Method payEconomical should decrease the balance by 2.50 euros and method payGourmet by 4.00 euros.
     public void payEconomical() {
-        // write code here
-        //balance = balance - 2.50;
         if(balance>=2.50){
             balance = balance -2.50;
         }
     }
     //Change methods payEconomical and payGourmet so that if there is not enough money, the balance does not change.
     public void payGourmet() {
-        // write code here
-        //balance = balance - 4.00;
         if(balance>=4.00){
             balance = balance -4.00;
-        }else{
-            //System.out.println("if there is not enough money the balance should stay the same");
-            //de ce functioneaza cu balanceAtStart = 5, dar nu functioneaza pentru alte cifre?
         }
     }
+
+    /*Exercise 77.4: Loading money to card - Add the LyyraCard the following method:
+     The method should increase the balance of the card by the given amount.
+     However, the maximum balance on a card is 150 euros.
+     In case the balance after loading money would be more than that, it should be truncated to 150 euros.
+     */
+
+    public void  loadMoney(double amount) {
+        int maxBalance = 150;
+        balance+=amount;
+        if( balance>maxBalance){
+            balance = balance - (balance-maxBalance);
+        }
+    }
+
+
     public static void main(String[] args) {
         ex77LyyraCard card = new ex77LyyraCard(6);
         System.out.println(card);
@@ -57,6 +66,12 @@ public class ex77LyyraCard {
         System.out.println(card);
 
         card.payGourmet();
+        System.out.println(card);
+
+        card.loadMoney(12);
+        System.out.println(card);
+
+        card.loadMoney(150);
         System.out.println(card);
     }
 }
