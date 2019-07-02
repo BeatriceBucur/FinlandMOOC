@@ -47,13 +47,18 @@ public class ex77LyyraCard {
      The method should increase the balance of the card by the given amount.
      However, the maximum balance on a card is 150 euros.
      In case the balance after loading money would be more than that, it should be truncated to 150 euros.
+
+     Exercise 77.5: Loading a negative amount
+    Change the method loadMoney so that the balance of the card does not change if the amount to load is negative.
      */
 
     public void  loadMoney(double amount) {
         int maxBalance = 150;
-        balance+=amount;
-        if( balance>maxBalance){
-            balance = balance - (balance-maxBalance);
+        if (amount > 0) {
+            balance += amount;
+            if (balance > maxBalance) {
+                balance = balance - (balance - maxBalance);
+            }
         }
     }
 
@@ -72,6 +77,9 @@ public class ex77LyyraCard {
         System.out.println(card);
 
         card.loadMoney(150);
+        System.out.println(card);
+
+        card.loadMoney(-190);
         System.out.println(card);
     }
 }
