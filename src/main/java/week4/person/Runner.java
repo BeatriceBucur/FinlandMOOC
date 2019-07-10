@@ -7,6 +7,16 @@ public class Runner {
 
         Person titi = new Person ("titi");
         Person gigi = new Person ( "gigi");
+        Person lili = new Person ("lili");
+
+        titi.setHeight(180);
+        titi.setWeight(80);
+
+        lili.setHeight(175);
+        lili.setWeight(60);
+
+        System.out.println(titi.getName() + " , body mass index: " + String.format("%.2f" , titi.bodyMassIndex()));
+        System.out.println(lili.getName() + " , body mass index: " + String.format("%.2f" , lili.bodyMassIndex()));
 
         mimi.printPerson();
         gigi.printPerson();
