@@ -18,19 +18,18 @@ public class ex78ClockCounter {
 
     public ex78ClockCounter(int upperBound) {
         this.upperBound = upperBound;
+        this.valueOfCounter = 0;
     }
 
     public void next() {
 
-        for (int i = 0; i < upperBound; i++) {
-
-            if (valueOfCounter<upperBound) {
+        if  (this.valueOfCounter < this.upperBound) {
                 valueOfCounter++;
-            } else {
-                valueOfCounter= 0;
+            } else{
+                valueOfCounter =0;
             }
         }
-    }
+
     public String toString(){
         return " " + valueOfCounter;
 
