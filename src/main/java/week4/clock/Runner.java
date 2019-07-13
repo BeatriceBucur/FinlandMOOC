@@ -6,6 +6,7 @@ public class Runner {
         System.out.println("Value at start: " + counter);
 
         int i = 0;
+
         while (i < 10) {
             counter.next();
             System.out.println("Value: " + counter);
