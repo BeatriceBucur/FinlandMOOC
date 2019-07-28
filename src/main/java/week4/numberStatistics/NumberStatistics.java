@@ -16,18 +16,18 @@ public class NumberStatistics {
      */
 
     private int amountOfNumbers;
-    private int numberStatistics;
+    private int sum;
 
 
     public NumberStatistics() {
         this.amountOfNumbers = 0;
-        this.numberStatistics = 0;
+        this.sum = 0;
 
     }
 
     public void addNumber(int number) {
         if (number != 0) {
-            this.numberStatistics = this.numberStatistics + number;
+            this.sum = this.sum + number;
         }
         this.amountOfNumbers++;
     }
@@ -37,6 +37,11 @@ public class NumberStatistics {
     }
 
     public int sumOfNumbers() {
-        return numberStatistics;
+        return sum;
+    }
+
+    public double average(){
+        double average = (double) sum/(double) amountOfNumbers;
+        return average;
     }
 }

@@ -10,5 +10,6 @@ public class RunnerStatistics {
         System.out.println("Amount: " + stats.amountOfNumbers());
 
         System.out.println("Sum of numbers is: " + stats.sumOfNumbers());
+        System.out.println("average is: " + stats.average());
     }
 }
