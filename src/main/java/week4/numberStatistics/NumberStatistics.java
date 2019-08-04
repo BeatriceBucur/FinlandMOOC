@@ -13,6 +13,10 @@ public class NumberStatistics {
     Note that the class should not store the added numbers.
     At this stage, it is enough to remember how many added numbers there are,
     i.e. how many times the method addNumber has been called.
+
+    Now add the following functions:
+    sum returns the sum of the added numbers (if no numbers added, the sum is 0)
+    average returns the average of the added numbers (if no numbers added, the average is 0)
      */
 
     private int amountOfNumbers;
