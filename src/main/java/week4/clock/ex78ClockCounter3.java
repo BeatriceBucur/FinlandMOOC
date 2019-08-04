@@ -15,32 +15,29 @@ public class ex78ClockCounter3 {
      */
     //fields
     int upperBound;
-    int valueOfCounterMinutes;
-    int valueOfCounterHours;
+    int valueOfCounter;
     private final static String FORMAT = "00";
 
     public ex78ClockCounter3(int upperBound){
         this.upperBound = upperBound;
-        this.valueOfCounterMinutes = 0;
-        this.valueOfCounterHours = 0;
+        this.valueOfCounter = 0;
     }
 
     public void next(){
-        if(this.valueOfCounterMinutes<upperBound){
-            valueOfCounterMinutes++;
-        }else if(this.valueOfCounterMinutes>=upperBound){
-            valueOfCounterMinutes = 0;
-            valueOfCounterHours++;
+        if(this.valueOfCounter<upperBound){
+            valueOfCounter++;
+        }else {
+            valueOfCounter = 0;
         }
     }
 
     public int getValue(){
-        return this.valueOfCounterHours;
+        return this.valueOfCounter;
     }
 
     public String toString(){
         DecimalFormat fmt = new DecimalFormat(FORMAT);      // use at least 2 digits
-        return fmt.format(valueOfCounterMinutes);
+        return fmt.format(valueOfCounter);
 
 
     }

@@ -2,8 +2,8 @@ package week4.clock;
 
 public class Runner3 {
     public static void main(String[] args) {
-        ex78ClockCounter3 minutes = new ex78ClockCounter3(59);
         ex78ClockCounter3 hours = new ex78ClockCounter3(23);
+        ex78ClockCounter3 minutes = new ex78ClockCounter3(59);
 
         int i = 0;
         while ( i < 121 ) {
@@ -11,7 +11,7 @@ public class Runner3 {
             // advance minutes
             minutes.next();
             // if minutes become zero, advance hours
-            if(minutes.valueOfCounterMinutes == 0) {
+            if(minutes.getValue() == 0) {
                 hours.next();
             }
             i++;
