@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class PasswordRandomizer {
     /*
-    Your assignment is to expand the class PasswordRandomizer that has the following functionality:
+    Your  assignment is to expand the class PasswordRandomizer that has the following functionality:
     The constructor PasswordRandomizer creates a new object, which uses the given password length.
     The method createPassword returns a new password,
     which consists of symbols a-z and is of the length given as a parameter to the constructor
